@@ -6,7 +6,7 @@ function OwnerEconomicsCard({ t, row }) {
   const marginPercent = row.revenue > 0 ? (row.netRevenue / row.revenue) * 100 : 0;
 
   return (
-    <GlassCard tilt={false} className="p-6 text-right" dir="rtl">
+    <GlassCard tilt={false} className="p-6 text-start h-full">
       <h3 className="text-sm font-black mb-1" style={{ color: "#233D29" }}>
         {t.widgets.ownerEconomics}
       </h3>

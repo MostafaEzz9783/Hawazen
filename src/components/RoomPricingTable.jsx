@@ -2,7 +2,7 @@ import { memo } from "react";
 import GlassCard from "@/components/ui/GlassCard";
 import { formatSAR } from "@/lib/format";
 
-const SCENARIO_KEYS = ["worst", "base", "best"];
+const SCENARIO_KEYS = ["base"];
 
 function RoomPricingTable({ t, roomPricing, scenario }) {
   return (

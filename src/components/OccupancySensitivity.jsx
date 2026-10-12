@@ -27,7 +27,7 @@ function OccupancySensitivity({ t, occupancyOptions, scenarioData, selectedOccup
           </defs>
           <CartesianGrid strokeDasharray="3 3" stroke={chartTheme.gridStroke} vertical={false} />
           <XAxis dataKey="occupancy" tick={chartTheme.axisTick} axisLine={chartTheme.axisLine} tickLine={false} />
-          <YAxis tick={chartTheme.axisTickSmall} axisLine={false} tickLine={false} tickFormatter={formatSAR} />
+          <YAxis width={85} tick={chartTheme.axisTickSmall} axisLine={false} tickLine={false} tickFormatter={formatSAR} />
           <Tooltip
             formatter={sarTooltipFormatter}
             contentStyle={chartTheme.tooltipContentStyle}

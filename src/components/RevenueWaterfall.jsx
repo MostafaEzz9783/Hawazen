@@ -55,7 +55,7 @@ function RevenueWaterfall({ t, row, revenueAt100 }) {
             textAnchor="end"
             height={50}
           />
-          <YAxis tick={chartTheme.axisTickSmall} axisLine={false} tickLine={false} tickFormatter={formatSAR} />
+          <YAxis width={85} tick={chartTheme.axisTickSmall} axisLine={false} tickLine={false} tickFormatter={formatSAR} />
           <Tooltip
             formatter={sarTooltipFormatter}
             contentStyle={chartTheme.tooltipContentStyle}

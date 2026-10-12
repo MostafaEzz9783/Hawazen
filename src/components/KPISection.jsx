@@ -13,7 +13,7 @@ function KPISection({ t, row, sparklineSeries, occupancy, revenueAt100, unitCoun
   const revenueSpark = useMemo(() => sparklineSeries.map((point) => ({ value: point.revenue })), [sparklineSeries]);
 
   const isNightly = NIGHTLY_MODELS.has(operatingModel);
-  const period = isNightly ? 365 : 12;
+  const period = isNightly ? 360 : 12;
   const adr = revenueAt100 / (unitCount * period);
   const revpar = row.revenue / (unitCount * period);
   const rateUnit = isNightly ? t.kpi.perNight : t.kpi.perMonth;

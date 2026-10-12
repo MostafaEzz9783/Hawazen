@@ -7,7 +7,7 @@ def model(sheet,units,revenues,occupancy,fees):
     s=values[sheet]
     return dict(source=sheet,units=units,revenues={k:s[c].value for k,c in revenues.items() if isinstance(s[c].value,(int,float))},occupancy=occupancy,fees=fees)
 models={
- 'str':model('STR-Regular Study Summary',17,{'base':'F10'},[60,65,70],[dict(key='otaFee',rate=.15),dict(key='operator',rate=.21)]),
+ 'str':model('STR-Regular Study Summary',17,{'base':'F10'},[60,65,70],[dict(key='otaFee',labelKey='otaFee',rate=.15),dict(key='madinumShare',labelKey='madinumShare',rate=.21)]),
 }
 sheets=[]
 for s in values:

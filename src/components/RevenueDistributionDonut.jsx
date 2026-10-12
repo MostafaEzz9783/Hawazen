@@ -22,7 +22,7 @@ function RevenueDistributionDonut({ t, row }) {
         name: t.fees[deduction.labelKey],
         value: deduction.amount,
         color: FEE_COLORS[deduction.key] ?? "#8b889c",
-        displayPercent: deduction.rate * 100,
+        displayPercent: null,
         index,
       })),
       {
@@ -51,7 +51,6 @@ function RevenueDistributionDonut({ t, row }) {
       <ChartContainer title={t.widgets.revenueDistribution} subtitle={t.widgets.revenueDistributionSubtitle} height={240}>
         <div className="flex items-center gap-4 h-full">
           <div className="w-[140px] h-[140px] flex-shrink-0">
-            {hasEnteredView ? (
               <PieChart width={140} height={140}>
                 <Pie
                   data={slices}
@@ -61,7 +60,7 @@ function RevenueDistributionDonut({ t, row }) {
                   outerRadius={64}
                   paddingAngle={3}
                   stroke="none"
-                  isAnimationActive
+                  isAnimationActive={hasEnteredView}
                   animationDuration={900}
                   animationEasing="ease-out"
                 >
@@ -77,9 +76,6 @@ function RevenueDistributionDonut({ t, row }) {
                   wrapperStyle={chartTheme.tooltipWrapperStyle}
                 />
               </PieChart>
-            ) : (
-              <div className="w-full h-full" />
-            )}
           </div>
           <div className="flex-1 min-w-0 space-y-2">
             {slices.map((slice) => (
@@ -91,7 +87,7 @@ function RevenueDistributionDonut({ t, row }) {
                   </span>
                 </span>
                 <span className="font-bold flex-shrink-0" style={{ color: slice.color, direction: "ltr" }}>
-                  {(slice.displayPercent ?? (slice.value / total) * 100).toFixed(0)}%
+                  {((slice.value / total) * 100).toFixed(2)}%
                 </span>
               </div>
             ))}
