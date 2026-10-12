@@ -1,5 +1,5 @@
 {
-  "name": "arqa-dashboard",
+  "name": "hawazen-dashboard",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -8,8 +8,6 @@
     "build": "vite build",
     "lint": "eslint . --quiet",
     "lint:fix": "eslint . --fix",
-    "validate:financial": "node scripts/validateArqaData.mjs",
-    "validate:leora-sources": "node scripts/validateLeoraSources.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
