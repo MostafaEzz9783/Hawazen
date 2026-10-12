@@ -5,11 +5,11 @@ export default function OccupancySlider({ options, value, onChange, expectedOccu
 
   return (
     <div className="w-full min-w-[240px] max-w-sm mx-auto">
-      <p className="text-xs font-semibold mb-2 text-center" style={{ color: "#9C99AE" }}>
+      <p className="text-xs font-semibold mb-2" style={{ color: "#9C99AE", textAlign: t.meta.language === "ar" ? "right" : "left" }}>
         {t.selectors.occupancy}
       </p>
       <div className="rounded-2xl px-4 py-3" style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
-        <div className="text-center text-sm font-black mb-3" style={{ color: "#E0A876" }}>
+        <div className="text-sm font-black mb-3" style={{ color: "#E0A876", direction: "ltr", textAlign: t.meta.language === "ar" ? "right" : "left" }}>
           {value}%
         </div>
         <input

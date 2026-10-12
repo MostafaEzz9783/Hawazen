@@ -40,6 +40,7 @@ export const translations = {
       },
     },
     roomTypes: {
+      studio: "استوديو",
       internalMaster: "ماستر داخلي",
       mediumRoom: "غرفة سكنية وسط",
       externalMaster: "ماستر خارجي",
@@ -241,6 +242,7 @@ export const translations = {
       internalMaster: "Internal Master Room",
       mediumRoom: "Medium Room",
       externalMaster: "External Master Room",
+      studio: "Studio",
       oneBedroom: "1Bd Unit",
       twoBedroom: "2Bd Unit",
       threeBedroom: "3Bd Unit",

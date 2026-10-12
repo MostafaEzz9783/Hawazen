@@ -11,6 +11,7 @@ export default function MetricCard({
   hero = false,
   accent = "#BF7C4A",
   footer,
+  align,
 }) {
   return (
     <GlassCard glow={hero} className={hero ? "p-8" : "p-5"}>
@@ -20,7 +21,7 @@ export default function MetricCard({
         </p>
         <p
           className={hero ? "text-4xl sm:text-5xl font-black tracking-tight" : "text-xl sm:text-2xl font-black tracking-tight"}
-          style={{ color: accent, direction: "ltr" }}
+          style={{ color: accent, direction: "ltr", textAlign: align }}
         >
           <AnimatedValue value={value} format={format} prefix={prefix} suffix={suffix} />
         </p>

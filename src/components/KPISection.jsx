@@ -34,6 +34,7 @@ function KPISection({ t, row, sparklineSeries, occupancy, revenueAt100, unitCoun
 
       <MetricCard
         label={t.kpi.occupancy}
+        align={t.meta.language === "ar" ? "right" : "left"}
         value={occupancy}
         format={(value) => formatPercent(value, 0)}
         suffix="%"
