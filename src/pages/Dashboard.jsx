@@ -33,8 +33,8 @@ export default function Dashboard({t,language,onToggleLanguage}){
  return <div className="str-dashboard min-h-screen relative" ref={ref}>
  <FloatingBackground/>
  <div className="relative max-w-7xl mx-auto pt-4 px-4 sm:px-0">
- <nav className="study-nav"><img src="/madinum-logo.jpeg?v=2" alt={t.nav.brandAlt} className="company-logo"/><div className="study-nav-actions"><button onClick={async()=>{const response=await fetch('/auth/logout',{method:'POST'});if(response.ok)window.location.replace('/login');}}>{tx('خروج','Sign out')}</button><button onClick={onToggleLanguage}><Globe size={16}/>{t.nav.languageToggle}</button><span className="project-pill">{tx('هوازن','Hawazen')}</span><Building2 size={16}/></div></nav>
- <Hero t={t} title={tx('هوازن','Hawazen')} subtitle={tx('17 وحدة · الإيجار قصير المدى (STR)','17 units · Short-term rental (STR)')}/>
+ <nav className="study-nav"><img src="/madinum-logo.jpeg?v=2" alt={t.nav.brandAlt} className="company-logo"/><div className="study-nav-actions"><button onClick={onToggleLanguage}><Globe size={16}/>{t.nav.languageToggle}</button><span className="project-pill">{tx('هوازن','Hawazen')}</span><Building2 size={16}/></div></nav>
+ <Hero t={t} title={tx('هوازن','Hawazen')} subtitle={tx(`${m.units} وحدة · الإيجار قصير المدى (STR)`,`${m.units} units · Short-term rental (STR)`)}/>
  </div>
  <main className="relative max-w-7xl mx-auto px-5 sm:px-6 pb-14">
  <div className="flex flex-wrap items-center gap-3 mb-6 mt-3"><Toolbar t={t} exportTargetRef={exportRef} exportFileName="Hawazen-STR-Study" isFullscreen={full} onToggleFullscreen={async()=>{if(document.fullscreenElement)await document.exitFullscreen();else await ref.current.requestFullscreen();}}/></div>
@@ -52,3 +52,4 @@ export default function Dashboard({t,language,onToggleLanguage}){
  <footer><span>{tx('مادينيوم · هوازن · دراسة STR','Madinum · Hawazen · STR Study')}</span></footer>
  </div></main></div>;
 }
+

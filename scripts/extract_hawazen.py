@@ -1,6 +1,6 @@
 import json, openpyxl
 from pathlib import Path
-workbook=openpyxl.load_workbook(r'C:/Users/Huawei/Downloads/Financial Study- Hawazen .xlsx',data_only=True)
+workbook=openpyxl.load_workbook(r'C:/Users/Huawei/Downloads/Financial Study- Hawazen  (1).xlsx',data_only=True)
 summary=workbook['STR-Regular Study Summary']
 pricing=workbook['STR-Regular Financial Study']
 model=dict(units=summary['F6'].value,revenues={'base':summary['F10'].value},occupancy=[round(summary[c].value*100) for c in ['F11','G11','H11']],fees=[dict(key='otaFee',labelKey='otaFee',rate=summary['I14'].value),dict(key='madinumShare',labelKey='madinumShare',rate=summary['I16'].value)],monthlyRate=pricing['H7'].value)

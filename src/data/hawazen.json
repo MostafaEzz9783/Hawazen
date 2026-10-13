@@ -1,1 +1,1 @@
-{"models": {"str": {"units": 17, "revenues": {"base": 1285200}, "occupancy": [60, 65, 70], "fees": [{"key": "otaFee", "labelKey": "otaFee", "rate": 0.15}, {"key": "madinumShare", "labelKey": "madinumShare", "rate": 0.21}], "monthlyRate": 6300}}}
+{"models": {"str": {"units": 16, "revenues": {"base": 1209600}, "occupancy": [60, 65, 70], "fees": [{"key": "otaFee", "labelKey": "otaFee", "rate": 0.15}, {"key": "madinumShare", "labelKey": "madinumShare", "rate": 0.21}], "monthlyRate": 6300}}}

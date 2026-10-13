@@ -1,23 +1,7 @@
-# Hawazen dashboard
+# Hawazen STR dashboard
 
-React dashboard with a server-side shared-account login. Financial assets are served only after session validation.
+The dashboard displays the updated 16-studio STR study without a login. Only prepared dashboard metrics are included; workbook cells, formulas and hidden sheets are excluded.
 
-## Vercel
+`npm run build` builds the React app and a Worker module for Sites and Vercel. Vercel routes requests through `api/index.mjs` using the tracked `vercel.json`. No account environment variables are required.
 
-Import this repository and deploy `main`. The tracked `vercel.json` sets the build command and routes all requests through the authenticated server function. Keep the output directory as `vercel-public`; never publish `dist` as static assets.
-
-Set these sensitive environment variables in the Vercel project's Settings → Environment Variables for Production (and Preview if needed):
-
-- `AUTH_USERNAME`: the chosen account username.
-- `AUTH_PASSWORD`: the chosen password.
-- `SESSION_SECRET`: a random secret of at least 32 bytes. Generate one with `openssl rand -hex 32` or a password manager.
-
-Redeploy after setting or changing environment variables. The server returns 503 until all three values exist. Credentials must never be committed or supplied as Vite client environment variables.
-
-## Sites
-
-The same build emits `dist/server/index.js` for Sites. Configure the same three secrets using Sites runtime settings and package the Worker using the Sites workflow.
-
-## Checks
-
-`node scripts/test-auth.mjs` tests server authentication using a disposable test account. `npm run build` builds the protected dashboard.
+`scripts/extract_hawazen.py` reads the supplied workbook and reconciles all three occupancy net-income results before writing dashboard inputs.
