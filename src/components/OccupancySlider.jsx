@@ -28,13 +28,16 @@ export default function OccupancySlider({ options, value, onChange, expectedOccu
           {options.map((option) => (
             <span
               key={option}
-              className="rounded-full px-1.5"
+              className="rounded-full px-2 py-1 inline-flex flex-col items-center gap-1"
               style={{
-                color: option === expectedOccupancy ? "#7DE0B5" : "#6f6c82",
+                color: option === expectedOccupancy ? "#233D29" : "#6f6c82",
+                backgroundColor: option === expectedOccupancy ? "rgba(120,152,121,0.24)" : "transparent",
+                border: option === expectedOccupancy ? "1px solid #789879" : "1px solid transparent",
                 fontWeight: option === expectedOccupancy ? 700 : 500,
               }}
             >
               {option}%
+              {option === expectedOccupancy && <span className="text-[10px]" dir={t.meta.language === 'ar' ? 'rtl' : 'ltr'}>{t.meta.language === 'ar' ? 'الإشغال المتوقع' : 'Expected occupancy'}</span>}
             </span>
           ))}
         </div>

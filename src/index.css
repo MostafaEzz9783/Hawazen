@@ -8,6 +8,7 @@
 .study-nav{display:flex;align-items:center;justify-content:space-between;direction:ltr;background:#304e35;border:1px solid #61765b;border-radius:18px 18px 12px 12px;padding:16px 20px;position:relative;z-index:5;}
 .company-logo{height:76px;width:76px;object-fit:contain;background:white;border-radius:9px;padding:4px;}
 .study-nav-actions{display:flex;align-items:center;gap:14px;color:#a5bba2;}.study-nav-actions button{display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:#49674b;color:#fbf8eb;font-weight:700;}.project-pill,.selected-model{background:linear-gradient(120deg,#dfa56f,#bd7c48);color:#233d29;display:inline-block;border-radius:15px;padding:10px 18px;font-size:17px;font-weight:700;}.project-pill{font-size:14px;}.selected-model small{display:block;font-size:10px;font-family:Arial,sans-serif;font-weight:400;}
+.study-nav-actions .project-pill{max-width:340px;text-align:center;line-height:1.5;}html .str-dashboard .brand-hero h1{overflow-wrap:break-word;line-height:1.35!important;font-size:clamp(28px,4vw,54px)!important;}
 .study-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;text-align:center;gap:24px;}.control-label{font-size:13px;color:#647064;margin-bottom:18px;}.csv-button{display:flex;gap:8px;align-items:center;padding:12px 16px;border-radius:10px;background:#fbf8eb;font-size:13px;}.source-details summary{cursor:pointer;font-size:15px;color:#426449;}.str-dashboard table{font-variant-numeric:tabular-nums;}.str-dashboard .source-note{font-size:12px;line-height:1.8;}.str-dashboard .brand-hero{margin-top:0;padding-top:30px;padding-bottom:36px;}.str-dashboard .brand-hero h1{font-size:clamp(40px,5vw,68px)!important;line-height:1.4;}.str-dashboard .brand-hero p:last-child{font-size:17px;}.str-dashboard .arqa-slider{background-color:#e1dcc8;}.str-dashboard [style*="rgb(111, 108, 130)"]{color:#647064!important;}
 @media(max-width:700px){.study-controls{grid-template-columns:1fr;gap:24px;}.company-logo{width:58px;height:58px;}.study-nav{padding:12px;}.study-nav-actions{gap:8px;}.str-dashboard .brand-hero{margin-inline:0;}.study-controls .selected-model{font-size:15px;}}
 .hawazen {font-family:'DIN Next LT Arabic',Arial,sans-serif;background:#f1ecd9;min-height:100vh;color:#233d29;}
@@ -107,3 +108,4 @@ h1, h2, h3, .font-black, .font-bold {
     scroll-behavior: auto !important;
   }
 }
+
