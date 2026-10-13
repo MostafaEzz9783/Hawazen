@@ -104,16 +104,22 @@ function ExecutiveClosing({ t }) {
               +966 50 433 8111
             </a>
           </div>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
           <a
             href="https://drive.google.com/file/d/1z9x34L65Zx5KHuMScKSbIvktx1GTltlb/view"
             target="_blank"
             rel="noreferrer"
-            className="mt-4 inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-bold transition-transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-bold transition-transform hover:-translate-y-0.5"
             style={{ color: "#FBF8EB", backgroundColor: "#426449", boxShadow: "0 8px 18px -12px rgba(35,61,41,0.65)" }}
           >
             {t.closing.aboutUs}
             <ExternalLink size={15} />
           </a>
+          <a href="https://madinum.sa/index.php" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-bold transition-transform hover:-translate-y-0.5" style={{color:'#FBF8EB',backgroundColor:'#426449',boxShadow:'0 8px 18px -12px rgba(35,61,41,0.65)'}}>
+            {t.meta.language === 'ar' ? 'زيارة موقع مادينيوم' : 'Visit Madinum Website'}
+            <ExternalLink size={15}/>
+          </a>
+          </div>
         </div>
       </GlassCard>
     </motion.div>

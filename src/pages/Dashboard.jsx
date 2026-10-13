@@ -49,7 +49,7 @@ export default function Dashboard({t,language,onToggleLanguage}){
  <motion.div className="mb-10" {...reveal}><OccupancySensitivity t={t} occupancyOptions={m.occupancy} scenarioData={scenarioData} selectedOccupancy={occupancy}/></motion.div>
  <SectionHeader eyebrow={t.sections.investmentHighlights} title={t.sections.investmentHighlights}/><motion.div {...reveal}><InvestmentHighlights t={t} row={row}/></motion.div>
  <div className="mt-10 mb-10"><ExecutiveClosing t={t}/></div>
- <footer><span>{tx('مادينيوم · هوازن · دراسة STR','Madinum · Hawazen · STR Study')}</span><a href="https://madinum.sa/index.php" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-bold transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4" style={{backgroundColor:'#426449',color:'#FBF8EB'}}><Globe size={16}/>{tx('زيارة موقع مادينيوم','Visit Madinum Website')}</a></footer>
+ <footer><span>{tx('مادينيوم · هوازن · دراسة STR','Madinum · Hawazen · STR Study')}</span></footer>
  </div></main></div>;
 }
 
